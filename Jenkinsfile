@@ -100,8 +100,8 @@ pipeline {
                     sh """
                       git config --global user.name "kanwarsaad"
                       git config --global user.email "kanwarsaad@gmail.com"
-                      git add frontenddeploy.yml
-                      git commit -m "Update the deployment file"
+                      git add backenddeploy.yml
+                      git commit -m "Update the file"
                     """
                     withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
                         sh "git push https://github.com/kanwarsaadali/bazar-argocd.git main"  
